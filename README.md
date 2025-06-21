@@ -1,61 +1,77 @@
-# InvestP - Investment Presentation Platform
+# PaanGuru Investor Presentation Platform
 
-A modern, responsive investment presentation platform built with Next.js, TypeScript, and Tailwind CSS.
+A modern, responsive investment presentation platform built with Next.js, TypeScript, and Tailwind CSS for PaanGuru's $100M ethnic food business opportunity.
 
-## Features
+## 🚀 Features
 
 -   **Responsive Design**: Mobile-first approach with full responsive support
 -   **TypeScript**: Full type safety and better developer experience
 -   **Tailwind CSS**: Utility-first CSS framework for rapid UI development
 -   **Component-Based**: Reusable components for maintainable code
 -   **Modern Layout**: Clean, professional design optimized for presentations
+-   **13 Interactive Slides**: Complete investor pitch deck
+-   **PDF Download**: Investor deck available for download
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 src/
 ├── app/
 │   ├── layout.tsx          # Root layout with metadata and global styles
-│   ├── page.tsx            # Main page with slideshow component
-│   └── globals.css         # Global styles and Tailwind imports
+│   ├── page.tsx            # Main landing page with hero section
+│   ├── paan-guru-slide/    # Slide 1: The Opportunity
+│   ├── slide-2/            # Slide 2: Market Analysis
+│   ├── slide-3/            # Slide 3: Traction & Growth
+│   ├── slide-4/            # Slide 4: Product Portfolio
+│   ├── slide-5/            # Slide 5: Financial Performance
+│   ├── slide-6/            # Slide 6: Revenue Model
+│   ├── slide-7/            # Slide 7: Business Model
+│   ├── slide-8/            # Slide 8: Competitive Advantage
+│   ├── slide-9/            # Slide 9: Market Size
+│   ├── slide-10/           # Slide 10: Product Showcase
+│   ├── slide-11/           # Slide 11: Team
+│   ├── slide-12/           # Slide 12: Investment Ask
+│   └── slide-13/           # Slide 13: Contact & Next Steps
 ├── components/
-│   └── SlideshowCard.tsx   # Reusable slideshow card component
+│   ├── LogoWithReflection.tsx
+│   ├── PaanGuruSlide.tsx
+│   ├── PaanGuruSlide2.tsx
+│   ├── PaanGuruSlide3.tsx
+│   ├── PaanGuruSlide4.tsx
+│   ├── PaanGuruSlide5.tsx
+│   ├── PaanGuruSlide6.tsx
+│   ├── PaanGuruSlide7.tsx
+│   ├── PaanGuruSlide8.tsx
+│   ├── SlideshowCard.tsx
+│   └── StickySlideNavigator.tsx
 ```
 
-## Components
+## 🖼️ Missing Images
 
-### SlideshowCard
+The following images need to be added to the `public/` directory for full functionality:
 
-A reusable card component for displaying presentation content with:
+### Required Images:
 
--   **Image Support**: Background images with proper aspect ratios
--   **Responsive Layout**: Adapts from mobile to desktop layouts
--   **Author Information**: Avatar/initials with name and date
--   **Badge System**: Premium content indicators
--   **TypeScript Interface**: Full type safety for props
+-   `logo.png` - PaanGuru logo
+-   `opportunity.png` - Slide 1 background
+-   `slide2.png` - Slide 2 background
+-   `slide3.png` - Slide 3 background
+-   `slide7.jpg` - Business model slide
+-   `slide9.jpg` - Market analysis slide
+-   `slide9.webp` - WebP version of slide 9
+-   `paankiosk.jpg` - PaanGuru kiosk image
+-   `straw-paan.jpeg` - Straw paan product
+-   `sweet-paan.jpeg` - Sweet paan product
+-   `chocpaan.jpeg` - Chocolate paan product
 
-#### Usage
+### Favicon Files:
 
-```tsx
-import SlideshowCard from '@/components/SlideshowCard'
+-   `favicon-16x16.png`
+-   `favicon-32x32.png`
+-   `apple-touch-icon.png`
+-   `safari-pinned-tab.svg`
 
-const presentation = {
-  imageUrl: 'https://example.com/image.jpg',
-  imageAlt: 'Presentation thumbnail',
-  badge: 'Premium Content',
-  title: 'Investment Strategy Overview',
-  description: 'Comprehensive analysis of market trends...',
-  author: {
-    name: 'Investment Research Team',
-    initials: 'IR',
-    date: 'Dec 2024'
-  }
-}
-
-<SlideshowCard {...presentation} />
-```
-
-## Getting Started
+## 🛠️ Getting Started
 
 1. **Install Dependencies**
 
@@ -63,40 +79,61 @@ const presentation = {
     npm install
     ```
 
-2. **Run Development Server**
+2. **Add Images** (Optional)
+
+    - Copy the required images to the `public/` directory
+    - Images are referenced in the components but will show placeholders if missing
+
+3. **Run Development Server**
 
     ```bash
     npm run dev
     ```
 
-3. **Open Browser**
+4. **Open Browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Technologies Used
+## 🎯 Key Metrics Displayed
+
+-   **$93.5K** Monthly Revenue
+-   **130+** Wholesale Clients
+-   **79%** Annual Growth
+-   **100%** Client Retention
+-   **$1.1M** ARR (Annual Recurring Revenue)
+
+## 🚀 Technologies Used
 
 -   **Next.js 15**: React framework with App Router
 -   **TypeScript**: Type-safe JavaScript
 -   **Tailwind CSS 4**: Utility-first CSS framework
 -   **React 19**: Latest React features
+-   **Framer Motion**: Animations and transitions
+-   **Chart.js**: Data visualization
+-   **Three.js**: 3D graphics
 
-## Development
+## 📊 Business Overview
+
+PaanGuru is revolutionizing Australia's ethnic food supply chain, specifically focusing on traditional paan products. The platform showcases:
+
+-   **Market Opportunity**: $100M untapped market potential
+-   **Proven Traction**: Bootstrapped to $1.1M ARR
+-   **Strong Retention**: 100% client retention rate
+-   **Scalable Model**: Wholesale distribution network
+-   **Product Innovation**: Modern twists on traditional paan
+
+## 🔗 Links
+
+-   **Live Demo**: [http://localhost:3000](http://localhost:3000)
+-   **Contact**: info@paanguru.com.au
+-   **PDF Deck**: Available for download on the landing page
+
+## 📝 Development
 
 -   **Build**: `npm run build`
 -   **Start**: `npm start`
 -   **Lint**: `npm run lint`
 
-## Customization
-
-The slideshow component is fully customizable through props:
-
--   `imageUrl`: Background image URL
--   `imageAlt`: Alt text for accessibility
--   `badge`: Content badge/label
--   `title`: Presentation title
--   `description`: Content description
--   `author`: Author information object
-
-## License
+## 📄 License
 
 MIT License - see LICENSE file for details
 
